@@ -24,4 +24,4 @@ apt install --yes --no-install-recommends firmware-linux-free firmware-linux-non
 rm -Rf /usr/share/icons/breeze_cursors
 mv /usr/share/icons/Breeze_Snow /usr/share/icons/breeze_cursors
 
-apt install tdebase-trinity
+apt install tdebase-trinity --yes
