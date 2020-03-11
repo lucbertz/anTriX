@@ -28,3 +28,12 @@ rm -Rf /usr/share/icons/breeze_cursors
 mv /usr/share/icons/Breeze_Snow /usr/share/icons/breeze_cursors
 
 apt install tdebase-trinity --yes
+
+apt autoremove --purge
+apt autoclean
+apt clean
+
+
+
+live-remaster
+
