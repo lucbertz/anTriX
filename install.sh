@@ -5,11 +5,11 @@ apt update
 apt upgrade --yes
 
 wget http://mirror.ppa.trinitydesktop.org/trinity/deb/trinity-keyring.deb
-sudo dpkg -i trinity-keyring.deb
+dpkg -i trinity-keyring.deb
 apt install -f --yes
 
-echo deb http://mirror.ppa.trinitydesktop.org/trinity/deb/trinity-v3.5.13 buster main > /etc/apt/sources.list
-echo deb http://mirror.ppa.trinitydesktop.org/trinity/deb/trinity-builddeps-v3.5.13 buster main >> /etc/apt/sources.list
+echo deb http://mirror.ppa.trinitydesktop.org/trinity/deb/trinity-r14.0.x buster main > /etc/apt/sources.list
+echo deb http://mirror.ppa.trinitydesktop.org/trinity/deb/trinity-builddeps-r14.0.x buster main >> /etc/apt/sources.list
 
 apt update
 
