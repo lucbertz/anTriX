@@ -2,7 +2,11 @@
 
 cd /opt
 
-apt purge --yes python* vim* cryptsetup-initramfs xorriso* extlinux* grub* yad reiser* elinks* memtest* mc* rox*
+locale-gen
+localedef --list-archive | grep -v -i ^en | xargs localedef --delete-from-archive
+
+apt purge --yes python* vim* cryptsetup-initramfs xorriso* extlinux* grub* \
+  yad reiser* elinks* memtest* mc* rox* console* debconf-i18n locales* gdbm-l10n libc-l10n 
 
 apt update
 apt upgrade --yes
@@ -32,9 +36,6 @@ mv /usr/share/icons/Breeze_Snow /usr/share/icons/breeze_cursors
 apt install --yes tdebase-trinity tdm-trinity baobab seamonkey libgtk-3-0 libdbus-glib-1-2
 
 apt purge --yes foomatic* klipper* khelpcenter* ktip* kate* *-dbg libgtk1*
-
-locale-gen
-localedef --list-archive | grep -v -i ^en | xargs localedef --delete-from-archive
 
 rm -r /usr/lib/python3
 rm -r /usr/share/doc/*
