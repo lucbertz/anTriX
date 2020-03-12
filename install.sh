@@ -29,15 +29,18 @@ apt install --yes --no-install-recommends firmware-linux-free firmware-linux-non
 rm -Rf /usr/share/icons/breeze_cursors
 mv /usr/share/icons/Breeze_Snow /usr/share/icons/breeze_cursors
 
-apt install tdebase-trinity --yes
+apt install tdebase-trinity seamonkey --yes
 
 apt purge --yes foomatic* klipper* khelpcenter* ktip* kate* *-dbg libgtk1* libgtk-3*
+
+rm -r /usr/lib/python3
+rm -r /usr/share/doc/*
+rm -r /usr/share/man/*
+rm -r /usr/share/man-db/*
+rm -r /usr/src/*
 
 apt autoremove --purge
 apt autoclean
 apt clean
 
-
-
 live-remaster
-
