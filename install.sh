@@ -30,7 +30,7 @@ mv /usr/share/icons/Breeze_Snow /usr/share/icons/breeze_cursors
 
 apt install tdebase-trinity --yes
 
-apt purge --yes foomatic* klipper*
+apt purge --yes foomatic* klipper* khelpcenter* ktip* 
 
 apt autoremove --purge
 apt autoclean
