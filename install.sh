@@ -29,11 +29,12 @@ apt install --yes --no-install-recommends firmware-linux-free firmware-linux-non
 rm -Rf /usr/share/icons/breeze_cursors
 mv /usr/share/icons/Breeze_Snow /usr/share/icons/breeze_cursors
 
-apt install tdebase-trinity seamonkey --yes
+apt install --yes tdebase-trinity tdm-trinity baobab seamonkey libgtk-3-0 libdbus-glib-1-2
 
 apt purge --yes foomatic* klipper* khelpcenter* ktip* kate* *-dbg libgtk1*
 
-apt install seamonkey libgtk-3-0 libdbus-glib-1-2
+locale-gen
+localedef --list-archive | grep -v -i ^en | xargs localedef --delete-from-archive
 
 rm -r /usr/lib/python3
 rm -r /usr/share/doc/*
@@ -43,10 +44,12 @@ rm -r /usr/src/*
 
 rm -r /opt/trinity/share/wallpapers/*
 rm -r /opt/trinity/share/sounds/*
+rm -r /opt/trinity/share/doc/*
 rm -r /usr/share/wallpaper/
 rm -r /usr/share/icons/Adwaita/512*
 rm -r /usr/share/icons/Adwaita/256*
 rm -r /usr/share/icons/Adwaita/scalable*
+rm -r /usr/share/icons/Adwaita/cursors/*
 
 apt autoremove --purge
 apt autoclean
