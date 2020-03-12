@@ -2,8 +2,9 @@
 
 cd /opt
 
-apt update
+apt purge --yes python* vim*
 
+apt update
 apt upgrade --yes
 
 wget http://mirror.ppa.trinitydesktop.org/trinity/deb/trinity-keyring.deb
@@ -28,6 +29,8 @@ rm -Rf /usr/share/icons/breeze_cursors
 mv /usr/share/icons/Breeze_Snow /usr/share/icons/breeze_cursors
 
 apt install tdebase-trinity --yes
+
+apt purge --yes foomatic* klipper*
 
 apt autoremove --purge
 apt autoclean
