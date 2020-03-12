@@ -2,7 +2,7 @@
 
 cd /opt
 
-apt purge --yes python* vim*
+apt purge --yes python* vim* cryptsetup-initramfs xorriso* extlinux* grub* yad reiser* elinks* memtest* mc* rox*
 
 apt update
 apt upgrade --yes
@@ -16,6 +16,7 @@ echo deb http://mirror.ppa.trinitydesktop.org/trinity/deb/trinity-r14.0.x buster
 echo deb http://mirror.ppa.trinitydesktop.org/trinity/deb/trinity-builddeps-r14.0.x buster main >> /etc/apt/sources.list
 
 apt update
+apt upgrade --yes
 
 apt install --yes --no-install-recommends firmware-linux-free firmware-linux-nonfree \
    firmware-atheros firmware-iwlwifi firmware-zd1211 firmware-realtek firmware-bnx2 firmware-brcm80211 firmware-b43-* b43-fwcutter\
@@ -30,7 +31,7 @@ mv /usr/share/icons/Breeze_Snow /usr/share/icons/breeze_cursors
 
 apt install tdebase-trinity --yes
 
-apt purge --yes foomatic* klipper* khelpcenter* ktip* 
+apt purge --yes foomatic* klipper* khelpcenter* ktip* kate* *-dbg libgtk1* libgtk-3*
 
 apt autoremove --purge
 apt autoclean
